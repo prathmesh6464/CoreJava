@@ -19,15 +19,22 @@ public class LinkedHashSetProgram {
 		// Showing set in order
 		linkedHashSet.forEach(data -> System.out.print(data + "   "));
 		System.out.println();
+
+		System.out.println(linkedHashSet.remove(1));
 		
+		System.out.println(linkedHashSet.size());
+		
+		System.out.println(linkedHashSet.isEmpty());
+
 		LinkedHashSet linkedHashSet2 = (LinkedHashSet) linkedHashSet.clone();
 		linkedHashSet2.forEach(data -> System.out.print(data + "   "));
 		System.out.println();
-		
+
+		// Converting vector in linked hash set
 		linkedHashSet2 = new LinkedHashSet<>(vector);
 		linkedHashSet2.forEach(data -> System.out.print(data + "   "));
 		System.out.println();
-		
+
 	}
 
 }
