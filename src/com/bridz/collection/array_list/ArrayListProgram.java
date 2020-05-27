@@ -60,7 +60,7 @@ public class ArrayListProgram {
 		arrayList.clear();
 		System.out.println(arrayList.isEmpty());
 
-		// Converting array list collection to vector
+		// Converting vector collection to array list
 		arrayList = new ArrayList(vector);
 		System.out.println(arrayList.isEmpty());
 		arrayList.forEach(data -> System.out.print("ArrayList data : " + data + "  "));
