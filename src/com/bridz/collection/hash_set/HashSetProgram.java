@@ -14,9 +14,9 @@ public class HashSetProgram {
 		System.out.println(hashSet.add("hi")); // false (duplicate values are not allowed)
 		System.out.println(hashSet.add(null));
 
-		for (int i = 1; i < 6; i++) {
-			hashSet.add(i);
-			arrayList.add(i + 5);
+		for (int temporaryValue = 1; temporaryValue < 6; temporaryValue++) {
+			hashSet.add(temporaryValue);
+			arrayList.add(temporaryValue + 5);
 		}
 
 		HashSet hashSet2 = (HashSet) hashSet.clone();
