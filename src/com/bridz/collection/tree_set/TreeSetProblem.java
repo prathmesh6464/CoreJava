@@ -17,6 +17,20 @@ public class TreeSetProblem {
 			hashSet.add(temporaryValue + 5);
 		}
 
+		System.out.println(treeSet.descendingSet());
+
+		System.out.println(treeSet.ceiling(4));
+
+		System.out.println(treeSet.floor(2));
+
+		System.out.println(treeSet.lower(2));
+
+		System.out.println(treeSet.higher(2));
+
+		System.out.println(treeSet.pollFirst());
+
+		System.out.println(treeSet.pollLast());
+
 		// Reading data from tree set
 		treeSet.forEach(data -> System.out.print(data + "  "));
 		System.out.println();
@@ -54,33 +68,6 @@ public class TreeSetProblem {
 		treeSet2.forEach(data -> System.out.print(data + "  "));
 		System.out.println();
 
-		TreeSet treeSet3 = new TreeSet(new MyComparator());
-
-		for (int i = 1; i < 6; i++) {
-
-			treeSet3.add(i);
-		}
-
-		treeSet3.forEach(data -> System.out.print("xx" + data + "  "));
-		System.out.println();
-
-	}
-}
-
-class MyComparator implements Comparator {
-
-	@Override
-	public int compare(Object arg1, Object arg2) {
-
-		int argNumber1 = (int) arg1;
-		int argNumber2 = (int) arg1;
-
-		if (argNumber1 < argNumber2)
-			return +1;
-		else if (argNumber1 > argNumber2)
-			return -1;
-		else
-			return 0;
 	}
 
 }
