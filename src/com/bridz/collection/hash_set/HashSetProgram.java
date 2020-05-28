@@ -12,7 +12,7 @@ public class HashSetProgram {
 
 		System.out.println(hashSet.add("hi")); // true
 		System.out.println(hashSet.add("hi")); // false (duplicate values are not allowed)
-		System.out.println(hashSet.add(null));
+		System.out.println(hashSet.add(null));   
 
 		for (int temporaryValue = 1; temporaryValue < 6; temporaryValue++) {
 			hashSet.add(temporaryValue);
