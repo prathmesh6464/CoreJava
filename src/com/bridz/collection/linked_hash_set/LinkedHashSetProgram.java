@@ -10,10 +10,10 @@ public class LinkedHashSetProgram {
 		LinkedHashSet linkedHashSet = new LinkedHashSet();
 		Vector vector = new Vector();
 
-		for (int i = 1; i < 6; i++) {
+		for (int temporaryValue = 1; temporaryValue < 6; temporaryValue++) {
 
-			linkedHashSet.add(i);
-			vector.add(i);
+			linkedHashSet.add(temporaryValue);
+			vector.add(temporaryValue);
 		}
 
 		// Showing set in order
@@ -21,9 +21,9 @@ public class LinkedHashSetProgram {
 		System.out.println();
 
 		System.out.println(linkedHashSet.remove(1));
-		
+
 		System.out.println(linkedHashSet.size());
-		
+
 		System.out.println(linkedHashSet.isEmpty());
 
 		LinkedHashSet linkedHashSet2 = (LinkedHashSet) linkedHashSet.clone();
