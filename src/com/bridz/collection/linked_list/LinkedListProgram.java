@@ -12,16 +12,16 @@ public class LinkedListProgram {
 		ArrayList arrayList = new ArrayList();
 		Vector vector = new Vector();
 
-		for (int i = 1; i <= 5; i++) {
+		for (int temporaryValue = 1; temporaryValue <= 5; temporaryValue++) {
 
-			linkList.add(i);
-			linkList.add("checking" + i);
+			linkList.add(temporaryValue);
+			linkList.add("checking" + temporaryValue);
 
-			vector.add(i);
-			vector.add("checking" + i);
+			vector.add(temporaryValue);
+			vector.add("checking" + temporaryValue);
 
-			arrayList.add(i);
-			arrayList.add("checking" + i);
+			arrayList.add(temporaryValue);
+			arrayList.add("checking" + temporaryValue);
 		}
 
 		// Reading each value by using for each
