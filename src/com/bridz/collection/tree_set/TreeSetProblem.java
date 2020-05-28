@@ -1,6 +1,7 @@
 package com.bridz.collection.tree_set;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.TreeSet;
 
@@ -11,9 +12,9 @@ public class TreeSetProblem {
 		TreeSet treeSet = new TreeSet();
 		HashSet hashSet = new HashSet();
 
-		for (int i = 1; i < 6; i++) {
-			treeSet.add(i);
-			hashSet.add(i + 5);
+		for (int temporaryValue = 1; temporaryValue < 6; temporaryValue++) {
+			treeSet.add(temporaryValue);
+			hashSet.add(temporaryValue + 5);
 		}
 
 		// Reading data from tree set
@@ -53,5 +54,33 @@ public class TreeSetProblem {
 		treeSet2.forEach(data -> System.out.print(data + "  "));
 		System.out.println();
 
+		TreeSet treeSet3 = new TreeSet(new MyComparator());
+
+		for (int i = 1; i < 6; i++) {
+
+			treeSet3.add(i);
+		}
+
+		treeSet3.forEach(data -> System.out.print("xx" + data + "  "));
+		System.out.println();
+
 	}
+}
+
+class MyComparator implements Comparator {
+
+	@Override
+	public int compare(Object arg1, Object arg2) {
+
+		int argNumber1 = (int) arg1;
+		int argNumber2 = (int) arg1;
+
+		if (argNumber1 < argNumber2)
+			return +1;
+		else if (argNumber1 > argNumber2)
+			return -1;
+		else
+			return 0;
+	}
+
 }
