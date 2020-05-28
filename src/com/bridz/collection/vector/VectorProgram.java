@@ -10,12 +10,12 @@ public class VectorProgram {
 		Vector vector = new Vector();
 		ArrayList arrayList = new ArrayList();
 
-		for (int i = 1; i <= 5; i++) {
+		for (int temporaryValue = 1; temporaryValue <= 5; temporaryValue++) {
 
-			vector.add(i);
-			vector.add("checking" + i);
-			arrayList.add(i);
-			arrayList.add("checking" + i);
+			vector.add(temporaryValue);
+			vector.add("checking" + temporaryValue);
+			arrayList.add(temporaryValue);
+			arrayList.add("checking" + temporaryValue);
 
 		}
 
