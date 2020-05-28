@@ -20,6 +20,20 @@ public class TreeMapProblem {
 
 		System.out.println(treeMap);
 
+		System.out.println(treeMap.firstKey());
+
+		System.out.println(treeMap.lastKey());
+
+		System.out.println(treeMap.ceilingKey("key3"));
+
+		System.out.println(treeMap.floorKey("key3"));
+
+		System.out.println(treeMap.lowerKey("key3"));
+
+		System.out.println(treeMap.higherKey("key3"));
+
+		System.out.println(treeMap.descendingKeySet());
+
 		Set keySet = treeMap.keySet();
 		keySet.forEach(key -> System.out.println(key));
 
@@ -38,9 +52,9 @@ public class TreeMapProblem {
 
 		System.out.println(treeMap.isEmpty());
 
-		HashMap hashMap2 = (HashMap) treeMap.clone();
+		TreeMap hashMap3 = (TreeMap) treeMap.clone();
 
-		hashMap2.entrySet().forEach(data -> {
+		hashMap3.entrySet().forEach(data -> {
 
 			System.out.println(((Entry) data).getKey() + "  " + ((Entry) data).getValue());
 		});
