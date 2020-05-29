@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
-
+import java.util.Collections;
 import java.util.Scanner;
 
 enum getInstance {
@@ -22,7 +22,7 @@ enum getInstance {
 		return new BufferedReader(new FileReader(
 				"C:\\Users\\King\\Documents\\workspace-spring-tool-suite-4-4.6.0.RELEASE\\CoreJava\\src\\UnorderedListOperationFile\\UnorderedOperationFile.txt"));
 	}
-	
+
 	public BufferedWriter getBufferedWriterInstance() throws IOException {
 		return new BufferedWriter(new FileWriter(
 				"C:\\Users\\King\\Documents\\workspace-spring-tool-suite-4-4.6.0.RELEASE\\CoreJava\\src\\UnorderedListOperationFile\\UnorderedOperationFile.txt",
@@ -37,7 +37,7 @@ public class UnorderedList {
 
 		try {
 			BufferedReader bufferReader = getInstance.INSTANCE.getBufferedReaderInstance();
-			BufferedWriter bufferWriter = getInstance.INSTANCE.getBufferedWriterInstance();  
+			BufferedWriter bufferWriter = getInstance.INSTANCE.getBufferedWriterInstance();
 
 			String fileLines;
 			List wordList = new LinkedList();
@@ -52,6 +52,8 @@ public class UnorderedList {
 					wordList.add(eachWord);
 
 			}
+
+			Collections.shuffle(wordList);
 
 			bufferReader.close();
 
