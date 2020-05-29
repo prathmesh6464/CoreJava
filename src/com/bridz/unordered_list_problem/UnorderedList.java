@@ -63,6 +63,9 @@ public class UnorderedList {
 			
 			// Searching value in the linked list
 			System.out.println(wordList.contains(findWord));
+			
+			// Checking list is empty or not
+			System.out.println(wordList.isEmpty());
 
 		} catch (IOException exception) {
 			exception.printStackTrace();
