@@ -66,6 +66,9 @@ public class UnorderedList {
 			
 			// Checking list is empty or not
 			System.out.println(wordList.isEmpty());
+			
+			// Checking size of linked list
+			System.out.println(wordList.size());
 
 		} catch (IOException exception) {
 			exception.printStackTrace();
