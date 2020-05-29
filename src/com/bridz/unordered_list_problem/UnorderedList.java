@@ -46,13 +46,16 @@ public class UnorderedList {
 			System.out.println("Enter the word to delete : ");
 			Scanner scanner = getInstance.INSTANCE.getScannerInstance();
 			String deleteWord = scanner.next();
-			
+
 			System.out.println("Enter the word to find : ");
 			String findWord = scanner.next();
-			
+
 			System.out.println("Enter the word to Append : ");
 			String appendWord = scanner.next();
-			
+
+			System.out.println("Enter the word to find index : ");
+			String findIndexOfWord = scanner.next();
+
 			while ((fileLines = bufferReader.readLine()) != null) {
 
 				String[] splittedFileLines = fileLines.split(" ");
@@ -64,20 +67,23 @@ public class UnorderedList {
 
 			// Deleting word from the linked list
 			System.out.println(wordList.remove(deleteWord));
-			
+
 			// Searching value in the linked list
 			System.out.println(wordList.contains(findWord));
-			
+
 			// Checking list is empty or not
 			System.out.println(wordList.isEmpty());
-			
+
 			// Checking size of linked list
 			System.out.println(wordList.size());
-			
+
 			// Append word to last position in list
 			System.out.println(wordList.add(appendWord));
-			
+
 			System.err.println(wordList);
+
+			// Returns the index position of the item
+			System.err.println(findIndexOfWord + " index is : " + wordList.indexOf(findIndexOfWord));
 
 		} catch (IOException exception) {
 			exception.printStackTrace();
