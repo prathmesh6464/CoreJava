@@ -46,8 +46,12 @@ public class UnorderedList {
 			System.out.println("Enter the word to delete : ");
 			Scanner scanner = getInstance.INSTANCE.getScannerInstance();
 			String deleteWord = scanner.next();
+			
 			System.out.println("Enter the word to find : ");
 			String findWord = scanner.next();
+			
+			System.out.println("Enter the word to Append : ");
+			String appendWord = scanner.next();
 			
 			while ((fileLines = bufferReader.readLine()) != null) {
 
@@ -69,6 +73,11 @@ public class UnorderedList {
 			
 			// Checking size of linked list
 			System.out.println(wordList.size());
+			
+			// Append word to last position in list
+			System.out.println(wordList.add(appendWord));
+			
+			System.err.println(wordList);
 
 		} catch (IOException exception) {
 			exception.printStackTrace();
