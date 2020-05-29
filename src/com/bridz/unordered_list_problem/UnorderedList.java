@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Collections;
 import java.util.Scanner;
 
+//Creating 
 enum getInstance {
 
 	INSTANCE;
@@ -39,57 +40,16 @@ public class UnorderedList {
 			BufferedReader bufferReader = getInstance.INSTANCE.getBufferedReaderInstance();
 			BufferedWriter bufferWriter = getInstance.INSTANCE.getBufferedWriterInstance();
 
-			String fileLines;
+			//Created empty list
 			List wordList = new LinkedList();
 
 			System.out.println("Enter the word : ");
 			Scanner scanner = getInstance.INSTANCE.getScannerInstance();
 			String findWord = scanner.next();
 
-			while ((fileLines = bufferReader.readLine()) != null) {
-				String[] splittedFileLines = fileLines.split(" ");
-				for (String eachWord : splittedFileLines)
-					wordList.add(eachWord);
+		} catch (
 
-			}
-
-			Collections.shuffle(wordList);
-
-			bufferReader.close();
-
-			if (wordList.contains(findWord)) {
-				System.out.println(wordList);
-				wordList.remove(findWord);
-				wordList.stream().forEach(word -> {
-					try {
-						bufferWriter.write(" " + word.toString());
-
-					} catch (Exception exception) {
-						exception.printStackTrace();
-					}
-				});
-
-				bufferWriter.close();
-
-				System.out.println(wordList);
-
-			} else {
-				System.out.println(wordList);
-				wordList.add(findWord);
-				wordList.stream().forEach(word -> {
-					try {
-						bufferWriter.write(" " + word.toString());
-
-					} catch (Exception exception) {
-						exception.printStackTrace();
-					}
-				});
-				bufferWriter.close();
-				System.out.println(wordList);
-				bufferWriter.close();
-			}
-
-		} catch (IOException exception) {
+		IOException exception) {
 			exception.printStackTrace();
 		}
 
