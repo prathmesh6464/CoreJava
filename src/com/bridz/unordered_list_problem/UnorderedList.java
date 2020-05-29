@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Collections;
 import java.util.Scanner;
 
+// Singleton pattern
 enum getInstance {
 
 	INSTANCE;
@@ -42,10 +43,12 @@ public class UnorderedList {
 			String fileLines;
 			List wordList = new LinkedList();
 
-			System.out.println("Enter the word : ");
+			System.out.println("Enter the word to delete : ");
 			Scanner scanner = getInstance.INSTANCE.getScannerInstance();
 			String deleteWord = scanner.next();
-
+			System.out.println("Enter the word to find : ");
+			String findWord = scanner.next();
+			
 			while ((fileLines = bufferReader.readLine()) != null) {
 
 				String[] splittedFileLines = fileLines.split(" ");
@@ -57,6 +60,9 @@ public class UnorderedList {
 
 			// Deleting word from the linked list
 			System.out.println(wordList.remove(deleteWord));
+			
+			// Searching value in the linked list
+			System.out.println(wordList.contains(findWord));
 
 		} catch (IOException exception) {
 			exception.printStackTrace();
