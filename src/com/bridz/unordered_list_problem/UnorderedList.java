@@ -56,6 +56,12 @@ public class UnorderedList {
 			System.out.println("Enter the word to find index : ");
 			String findIndexOfWord = scanner.next();
 
+			System.out.println("Enter the index to inset word : ");
+			int indexPosition = scanner.nextInt();
+
+			System.out.println("Enter the word to inset on given index : ");
+			String addWordOnIndex = scanner.next();
+
 			while ((fileLines = bufferReader.readLine()) != null) {
 
 				String[] splittedFileLines = fileLines.split(" ");
@@ -64,6 +70,9 @@ public class UnorderedList {
 					wordList.add(eachWord);
 
 			}
+
+			// Creating unordered link list using shuffle method of collections
+			//Collections.shuffle(wordList);
 
 			// Deleting word from the linked list
 			System.out.println(wordList.remove(deleteWord));
@@ -80,10 +89,14 @@ public class UnorderedList {
 			// Append word to last position in list
 			System.out.println(wordList.add(appendWord));
 
-			System.err.println(wordList);
+			System.out.println(wordList);
 
 			// Returns the index position of the item
-			System.err.println(findIndexOfWord + " index is : " + wordList.indexOf(findIndexOfWord));
+			System.out.println(findIndexOfWord + " index is : " + wordList.indexOf(findIndexOfWord));
+
+			System.out.println(wordList.set(indexPosition, addWordOnIndex));
+			
+			System.out.println(wordList);
 
 		} catch (IOException exception) {
 			exception.printStackTrace();
