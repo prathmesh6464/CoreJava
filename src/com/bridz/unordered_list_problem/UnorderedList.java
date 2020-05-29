@@ -44,16 +44,19 @@ public class UnorderedList {
 
 			System.out.println("Enter the word : ");
 			Scanner scanner = getInstance.INSTANCE.getScannerInstance();
-			String findWord = scanner.next();
+			String deleteWord = scanner.next();
 
 			while ((fileLines = bufferReader.readLine()) != null) {
-				
+
 				String[] splittedFileLines = fileLines.split(" ");
 				for (String eachWord : splittedFileLines)
-					//Added new word to linked list
+					// Added new word to linked list
 					wordList.add(eachWord);
 
 			}
+
+			// Deleting word from the linked list
+			System.out.println(wordList.remove(deleteWord));
 
 		} catch (IOException exception) {
 			exception.printStackTrace();
