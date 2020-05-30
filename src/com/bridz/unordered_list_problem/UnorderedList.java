@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Collections;
 import java.util.Scanner;
 
-enum getInstance {
+enum GetInstance {
 
 	INSTANCE;
 
@@ -36,14 +36,14 @@ public class UnorderedList {
 	public static void main(String args[]) {
 
 		try {
-			BufferedReader bufferReader = getInstance.INSTANCE.getBufferedReaderInstance();
-			BufferedWriter bufferWriter = getInstance.INSTANCE.getBufferedWriterInstance();
+			BufferedReader bufferReader = GetInstance.INSTANCE.getBufferedReaderInstance();
+			BufferedWriter bufferWriter = GetInstance.INSTANCE.getBufferedWriterInstance();
 
 			String fileLines;
 			List<Object> wordList = new LinkedList<Object>();
 
 			System.out.println("Enter the word : ");
-			Scanner scanner = getInstance.INSTANCE.getScannerInstance();
+			Scanner scanner = GetInstance.INSTANCE.getScannerInstance();
 			String findWord = scanner.next();
 
 			while ((fileLines = bufferReader.readLine()) != null) {
